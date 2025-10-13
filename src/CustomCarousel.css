@@ -1,0 +1,13 @@
+.slides{
+    display: flex;
+    overflow: hidden;
+    color: rgb(85, 85, 85);
+    height: 50vh;
+}
+.slides img{
+    width: 100%;
+    height: 200px;
+    /* height: auto; */
+    display: block;
+    
+}

@@ -1,0 +1,207 @@
+header{
+  background-color:rgb(4, 3, 31);
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  color: gainsboro;
+  align-items: center;
+}
+
+.logo{
+  max-width: 10em;
+}
+
+header nav ul{
+  list-style-type: none;
+  display: flex;
+  gap: 3em;
+}
+
+
+.hero-section{
+  display: flex;
+  margin: 4em 2em 1em 2em;
+  justify-content: space-between;
+  min-height: 70vh;
+
+}
+
+/*  */
+.brand-section{
+  margin: auto;
+  margin-left: 2em;
+}
+.brand-section .brand-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2em;
+}
+
+.brand-section img{
+  width: 100%;
+  height: auto;
+  max-width: 10em;
+  transition: transform 1s;
+}
+
+.brand-section .brand-card{
+  max-width: 10em;
+  background-color: white;
+  padding: 1em;
+  box-shadow: 2px 2px 25em rgba(0, 0, 0, 0.071);
+}
+
+.brand-section .brand-card:hover{
+   box-shadow: 2px 2px 25em rgba(123, 79, 255, 0.084);
+}
+
+.brand-section img:hover{
+  transform: scale(1.1);
+}
+
+/* CATEGORY */
+
+.category-section{
+  margin-top: 4em;
+  max-height: 50em;
+}
+
+.category-section h1{
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.car-filter-options{
+ display: flex;
+ justify-content: center;
+}
+.car-filter-options ul{
+   list-style-type: none;
+   gap: 2em;
+   display: flex;
+}
+
+.carousel-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden; /* Prevent overflow */
+  position: relative;
+  z-index: 1;
+}
+
+
+.carousel-wrapper-img img{
+   width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures image fills container without distortion */
+  display: block;
+
+}
+
+.car-filter-options ul li{
+  font-size: 1.3em;
+  font-weight: 500;
+  transition: color 1s;
+}
+
+.car-filter-options ul li:hover{
+  color: dodgerblue;
+}
+
+/* SERVICES SECTION */
+
+.services-section{
+  margin: 1em 1em;
+}
+
+.services-section h1{
+  text-align: center;
+  margin-bottom: 3em;
+  font-weight: 700;
+  font-size: 3em;
+}
+
+.services-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+
+.persolized-car, .test-car{
+  width: 100%;
+  height: auto;
+  max-width: 40em;
+  border-radius: 10px;
+}
+
+
+
+
+footer{
+  background-color: rgb(4, 3, 31);
+  color: gainsboro;
+  min-height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 5em 1em 2em 1em;
+  align-items: center;
+}
+
+footer ul{
+  display: flex;
+  list-style-type: none;
+  gap: 2em;
+}
+
+footer .car-logo{
+  width: 100%;
+  height: auto;
+  max-width: 10em;
+}
+
+@media(max-width:900px){
+    .brand-section img{
+      max-width: 6em;
+    }
+
+    .brand-section .brand-card{
+      box-shadow: 2px 2px 25em rgba(0, 0, 0, 0.071);
+    }
+    footer{
+      align-items: start;
+    }
+    footer ul{
+      flex-direction: column;
+    }
+}
+
+@media(max-width:678px){
+    header nav{
+      display: none;
+    }
+
+    .hero-section{
+      flex-direction: column;
+
+    }
+
+    .brand-section img{
+      max-width: 6em;
+    }
+
+    .brand-section .brand-card{
+      box-shadow: 2px 2px 25em rgba(0, 0, 0, 0.071);
+    }
+
+    .services-container{    
+      grid-template-columns: 1fr;
+      gap: 2em;
+    }
+
+    footer{
+      flex-direction: column;
+    }
+    footer ul{
+      flex-direction: row;
+    }
+}
